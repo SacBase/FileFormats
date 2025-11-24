@@ -1,49 +1,9 @@
-# SAC JSON Module
-## About
-This is a Sac module that wraps around some of the [cJSON](https://github.com/DaveGamble/cJSON) library.
+# SaC File Formats
 
-## Supported Functionality
-- Creation of:
-	- JSON objects
-	- JSON arrays
-- Booleans
-	- Insertion into JSON object
-	- Insertion into JSON array
-	- Replacing elements in JSON arrays with Booleans
-- Numbers (int, float, double)
-	- Insertion into JSON object
-	- Insertion into JSON array
-	- Replacing elements in JSON arrays with Numbers
-- Strings
-	- Insertion into JSON object
-	- Insertion into JSON array
-	- Replacing elements in JSON arrays with Strings
-- Arrays
-	- Insertion into JSON object
-	- Insertion of additional elements after insertion by means of changing focus
-	- Replacing elements in JSON arrays with JSON arrays
-- Objects
-	- Insertion into JSON object
-	- Insertion of additional elements after insertion by means of changing focus
-	- Replacing elements in JSON arrays with JSON objects
-- Serialization to stdout of:
-	- JSON objects
-	- JSON arrays
-- Shifting focus:
-	- to child nodes
-	- to the root JSON object
+The project uses `cmake-common`.
+Upon cloning this repo it is important initialize submodules.
 
-## Build Instructions
-You will need to have installed sac2c and have a copy of the Stdlib installed as well. It is also assumed that the submodules are initialized and updated correctly either via cloning with `--recurse-submodules` or as follows:
 ```bash
-git submodules init
-git submodules update
-```
-
-When submodules are in order follow the following build instructions to build the library:
-```bash
-mkdir build
-cd build
-cmake ..
-make -j4
+git submodule update --init --recursive
+make
 ```

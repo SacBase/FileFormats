@@ -14,6 +14,6 @@ jobs:
       - name: Configure sac2c
         run: cp -r /root/.sac2crc $HOME/.sac2crc
       - name: Install dependencies
-        run: sudo apt install -y libcjson-dev libyaml-dev
+        run: apt install -y libcjson-dev libyaml-dev
       - name: Build
         run: make
