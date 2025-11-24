@@ -1,0 +1,19 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: sacbase/sac-compiler
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: 'recursive'
+      - name: Configure sac2c
+        run: cp -r /root/.sac2crc $HOME/.sac2crc
+      - name: Install dependencies
+        run: sudo apt install -y libcjson-dev libyaml-dev
+      - name: Build
+        run: make
