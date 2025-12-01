@@ -1,6 +1,6 @@
 #include <cJSON.h>
 #include "sac.h"
-#include "../include/sac_cjson.h"
+#include "sac_cjson.h"
 
 void delete_json_object( SAC_cJSON * object)
 {

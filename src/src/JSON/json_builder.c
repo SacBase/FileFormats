@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "sac.h"
-#include "../include/sac_cjson.h"
+#include "sac_cjson.h"
 
 // Creation
 static SAC_cJSON * make_sac_cjson_object( cJSON * object)
